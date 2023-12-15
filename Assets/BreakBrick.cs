@@ -10,8 +10,9 @@ public class BreakBrick : MonoBehaviour
     [SerializeField]
     GameObject TextGameObject;
     [SerializeField]
-    GameObject ball;
     
+    
+
     
 
     TextMeshProUGUI TextComp;
@@ -19,12 +20,17 @@ public class BreakBrick : MonoBehaviour
     void Start()
     {
         TextComp = TextGameObject.GetComponent<TextMeshProUGUI>();
+
+
         
         
     }
     
     private void OnCollisionEnter(Collision collision)
     {
+        //GameObject ball = collision.gameObject;
+        //BallMomentum addpoint = ball.GetComponent<BallMomentum>();
+        
         
         Destroy(gameObject);
 
@@ -35,7 +41,7 @@ public class BreakBrick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TextComp.text = "Points:";
+       
     }
     
 }
